@@ -1,0 +1,233 @@
+:root {
+    --magenta: hsl(300, 43%, 22%);
+    --pink: hsl(333, 80%, 67%);
+    --darkmagenta: hsl(303, 10%, 53%);
+    --lightmagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.content {
+    width: 100vw;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.information {
+    width: 50%;
+    min-width: 300px;
+    padding: 4rem;
+    text-align: left;
+}
+
+.information h1 {
+    font-size: 3rem;
+    color: var(--color-purple);
+    line-height: 1;
+}
+
+.information p {
+    font-weight: 500;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.ratings {
+    width: 50%;
+    padding: 2.5rem;
+    margin-top: 30px;
+}
+
+.rating-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.rating-card {
+    margin: auto;
+    min-width: 400px;
+    background-color: var(--lightmagenta);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px 10px 10px 10px;
+    align-items: center;
+    padding: .5rem;
+}
+.rating-card:first-child{
+    transform: translateX(-30px);
+}
+.rating-card:last-child{
+    transform: translateX(10px);
+}
+
+.stars {
+    margin: auto;
+    align-items: center;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+
+
+}
+
+.card-text {
+    width: auto;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    padding-top: 10px;
+
+}
+
+.card-text p {
+    margin: auto;
+    font-weight: bold;
+}
+
+.reviews {
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.reviews-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
+
+}
+
+.review-card {
+    width: 300px;
+    background-color: var(--magenta);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.top-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.img-card {
+    width: 100px;
+    display: flex;
+}
+
+.img-card img {
+    width: 50%;
+    border-radius: 100%;
+    margin: auto;
+    object-fit: cover;
+
+}
+.name-card{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    color: var(--pink);
+}
+.name-card h2{
+    color: var(--white);
+    font-size: inherit;
+    margin: auto;
+}
+.bottom-card{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    color: var(--white);
+
+}
+.review-card:first-child{
+    transform: translateY(-20px);
+}
+.review-card:last-child{
+    transform: translateY(20px);
+}
+@media(max-width: 900px){
+    .information{
+        padding: 3rem;
+        text-align: left;
+    }
+    .rating-card:first-child,.rating-card:last-child{
+        transform: none;
+    }
+   
+   
+    .review-card:first-child{
+        transform: none;
+    }
+    .review-card:last-child{
+        transform: none;
+    }
+ 
+}
+@media(max-width: 750px){
+    .ratings{
+        margin: 0;
+        padding: 0;
+    }
+    .rating-container{
+        width: 100%;
+    }
+    .rating-card{
+        width: 400px;
+    }
+    .rating-card:first-child,.rating-card:last-child{
+        transform: none;
+    }
+    .reviews{
+        width: 100vw;
+    }
+    .reviews-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column
+    }
+    .review-card{
+        margin: auto;
+    }
+    .top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .information,.ratings{
+        width: 100%;
+    }
+
+
+
+
+}
