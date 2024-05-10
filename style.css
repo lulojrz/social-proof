@@ -174,6 +174,8 @@ body {
 .review-card:last-child{
     transform: translateY(20px);
 }
+
+   
 @media(max-width: 900px){
     .information{
         padding: 3rem;
@@ -192,17 +194,27 @@ body {
     }
  
 }
-@media(max-width: 750px){
+@media(max-width: 700px){
+    body{
+        width: 100vw;
+   
+    }
+    .information h1{
+        font-size: 2.1rem;
+    }    
+    .information p{
+        margin: 0;
+    }
     .ratings{
         margin: 0;
         padding: 0;
     }
     .rating-container{
-        width: 100%;
+        width: 100vw;
     }
-    .rating-card{
-        width: 400px;
-    }
+ 
+
+
     .rating-card:first-child,.rating-card:last-child{
         transform: none;
     }
@@ -226,7 +238,7 @@ body {
     .information,.ratings{
         width: 100%;
     }
-      .information{
+    .information{
         padding: .5rem;
         text-align: center;
 
@@ -235,4 +247,21 @@ body {
 
 
 
+}
+@media (max-width:400px) {
+    .rating-card{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: none;
+    }
+    .stars{
+        width: 50%;
+    }
+    .information h1{
+        font-size: 2.1rem;
+    }    
+    .information p{
+        margin: 0;
+    }
 }
